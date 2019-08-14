@@ -1,0 +1,28 @@
+Environment: got to anaconda cloud then search for -> (username/environment) borchr27/stableenv
+
+python version 3.7.3
+pandas version 0.25.2
+tk version 8.6.8
+xlrd version 1.2.0
+
+ABOUT --V8 2019
+Program written by Borchr27 as a sub assembly tracker to allow an employee to type in a finished 
+goods part number then return all the individual parts/part numbers within that assembly. 
+Program uses tkinter to create a user interface. Also packaged the program into a nice little executable file.
+
+CODE
+The code uses Pandas to translate the excel file into a workable/searchable format.
+The SEARCH function locates the initial part number in the excel file.
+It then pulls all the sub assembly or final part numbers into two lists.
+One list (fnpl, which stands for final part number list) is used to store base level part numbers that have no sub assemblies.
+The next list (sub_asms) is carried thru the functions and holds part numbers that still have sub assemblies.
+Next Steps: 
+
+Example / Test Case / Uses Part Number Example Set File.xlsx
+part number to lookup: 100-1049
+32, 37, 40, 44, 45, 46
+32, (31, 28), (1, 39), 44, 45, 46
+31, 32, (4), 1, 39, 44, 45, 46
+1, 1, 3, 31, 32, 39, 44, 45, 46
+
+Finished Goods for PN 100-1049: 1, 1, 3, 31, 32, 39, 44, 45, 46
